@@ -1,19 +1,17 @@
 package org.example;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class Ledger {
-    //initializing an arraylist which holds transactions objects and calling it transactionsLists
-    // So we are inheriting the transactions array lists from the getTransactions()
+public class Reports {
+
     public static ArrayList<Transaction> transactionsDetail = getTransaction();
 
     public static ArrayList<Transaction> getTransaction() {
@@ -76,96 +74,58 @@ public class Ledger {
     }
 
 
-    public static void ShowLedger() {
-        //creating a method called showLedger() to display the ledger menu
+    public static void reportsMenu() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
-                Welcome to your Account Ledger."
-                Main Menu
-                [A] - All Entries
-                [D] - Deposits
-                [P] - Payments
-                [R] - Reports
-                [H] - Home""");
+                        
+                "Report Entries: 
+                [1] Month To Date\n +
+                [2] Previous Month\n +
+                [3] Year To Date\n +
+                [4] Previous Year\n +
+                [5] Search by Vendor\n +
+                 
+                [0] Back - go back to the report page\n +
+                [H] Home - go back to the home page""");
+
         //using switch method instead of if/else statement to run the corresponding method based on the user's input
         String input = scanner.nextLine();
         switch (input.toUpperCase()) {
-            case "A":
-                showEntries();
+            case "1":
+                showMonthToDate();
                 break;
-            case "D":
-                showDeposits();
+            case "2":
+                showPreviousMonth();
                 break;
-            case "P":
-                showPayments();
+            case "3":
+                showYearToDate();
                 break;
-            case "R":
-                reportsMenu();
+            case "4":
+                showPreviousYear();
+            case "5":
+                showSearchByVendor();
+            case "0":
+                Main.reportpage();
             case "H":
                 Main.homescreen();
             default:
                 System.out.println("Please enter a a valid option");
                 break;
         }
-
     }
 
-    public static void showEntries() {
-        //Declaring the allEntries() method
-        System.out.println("All Entries:");
-        for (Transaction item : transactionsDetail) {
-            //loop through each transaction object(item) in the transactionsList
-            //array list and print out private variables using the getter methods
-            System.out.println(
-                    item.getDate() + "  " +
-                            item.getTime() + " " +
-                            item.getDescription() + " " +
-                            item.getVendor() + " " +
-                            item.getAmount()
-            );
-        }
-
+    private static void showSearchByVendor() {
     }
 
-    public static void showDeposits() {
-        System.out.println("Deposits Entries:");
-        for (Transaction item : transactionsDetail) {
-            //loop through each transaction object(item) in the transactionsList
-            //array list and check if the price is positive (deposit)
-            if (item.getAmount() > 0) {
-                //printing out it private variables using getter methods
-                System.out.println(
-                        item.getDate() + " " +
-                                item.getTime() + " " +
-                                item.getDescription() + " " +
-                                item.getVendor() + " " +
-                                item.getAmount());
-            }
-        }
-
+    private static void showPreviousYear() {
     }
 
-    public static void showPayments() {
-        System.out.println("Payments Entries:");
-        for (Transaction item : transactionsDetail) {
-            //loop through each transaction object(item) in the transactionsList
-            //array list and check if the price is negative (payment)
-            if (item.getAmount() < 0) {
-                //printing out it private variables using getter methods
-                System.out.println(
-                        item.getDate() + " " +
-                                item.getTime() + " " +
-                                item.getDescription() + " " +
-                                item.getVendor() + " " +
-                                item.getAmount());
-            }
-
-        }
-
+    private static void showYearToDate() {
     }
 
-    public static void reportsMenu() {
-        System.out.println("Reports Entries:");
+    private static void showPreviousMonth() {
+    }
 
+    private static void showMonthToDate() {
     }
 }

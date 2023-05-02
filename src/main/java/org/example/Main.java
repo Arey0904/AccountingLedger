@@ -14,13 +14,15 @@ public class Main {
 
     public static void homescreen() {
         Scanner scanner = new Scanner(System.in);
+        //Welcomes user and Displays Home screen
         System.out.println("""
                 Welcome to your Finance Account."
                 Main Menu
-                [D] - Add Depost
+                [D] - Add Deposit
                 [P] - Make Payment
-                [L] - LEDGER
+                [L] - Ledger
                 [X] - Exit""");
+        // use switch method for options in home screen
         String input = scanner.nextLine();
         switch (input.toUpperCase()) {
             case "D":
@@ -41,6 +43,7 @@ public class Main {
     }
 
     public static void addDeposit() {
+        //using Scanner to get user's input and storing it in a corresponding variable
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Date.");
         String date = scanner.nextLine();
@@ -54,7 +57,9 @@ public class Main {
         double amount = scanner.nextDouble();
 
         try {
+            //writing the information from the variables into the csv. file
             FileWriter fileWriter = new FileWriter("transaction.csv", true);
+            //add bar strings in between the variables
             fileWriter.write("\n" +
                     date + "|" +
                     time + "|" +
@@ -71,6 +76,7 @@ public class Main {
     }
 
     public static void makePayment() {
+        // Using Scanner to get user's input and storing it in the corresponding variable
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Date.");
         String date = scanner.nextLine();
@@ -82,9 +88,12 @@ public class Main {
         String vendor = scanner.nextLine();
         System.out.println("Enter Transaction Account.");
         double amount = scanner.nextDouble();
+        //storing the amount as a double type.
 
         try {
+            // using the fileWriter to add the collected data into the csv file
             FileWriter fileWriter = new FileWriter("transaction.csv", true);
+            //store all the information with a - sign
             fileWriter.write("\n" +
                     date + "|" +
                     time + "|" +
@@ -93,7 +102,7 @@ public class Main {
                     amount
             );
             System.out.println("Payment added successfully!");
-        } catch (IOException e) {
+        } catch (IOException e) { //print an error message when input is wrong
             System.out.println("ERROR inputting date!");
             throw new RuntimeException(e);
         }
@@ -101,8 +110,13 @@ public class Main {
 
     }
 
+    //Calling showLedger() method from the ledger class
     public static void showLedger() {
         Ledger.ShowLedger();
+    }
+
+    public static void reportpage() {
+        Reports.reportsMenu();
     }
 
 }
