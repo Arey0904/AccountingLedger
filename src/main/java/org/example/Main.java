@@ -58,7 +58,7 @@ public class Main {
 
         try {
             //writing the information from the variables into the csv. file
-            FileWriter fileWriter = new FileWriter("transaction.csv", true);
+            FileWriter fileWriter = new FileWriter("transactions.csv", true);
             //add bar strings in between the variables
             fileWriter.write("\n" +
                     date + "|" +
@@ -92,7 +92,7 @@ public class Main {
 
         try {
             // using the fileWriter to add the collected data into the csv file
-            FileWriter fileWriter = new FileWriter("transaction.csv", true);
+            FileWriter fileWriter = new FileWriter("transactions.csv", true);
             //store all the information with a - sign
             fileWriter.write("\n" +
                     date + "|" +
