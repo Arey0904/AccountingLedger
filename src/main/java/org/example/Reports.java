@@ -1,13 +1,6 @@
 package org.example;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.Year;
-import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
@@ -46,9 +39,9 @@ public class Reports {
             case "5":
                 showSearchByVendor();
             case "0":
-                Main.reportpage();
+                FinanceAccount.reportpage();
             case "H":
-                Main.homescreen();
+                FinanceAccount.homescreen();
             default:
                 System.out.println("Please enter a a valid option");
                 break;
@@ -84,14 +77,14 @@ public class Reports {
         return previousYearValue;
     }
 
-    public static void showYearToDate() {// prints the 1st of the current month to the current date(today)
+    public static void showYearToDate() {// prints the 1st of the current year to the current date(today)
         System.out.println("Here is your year to date report: ");
         LocalDate currentDate = LocalDate.now(); // this method gets the current date using 'LocalDate.now()
-        LocalDate startOfTheCurrentYear = currentDate.withDayOfYear(1); // this method gets the first day of the month
-        //using the 'withDayOfMonth(1) method
+        LocalDate startOfTheCurrentYear = currentDate.withDayOfYear(1); // this method gets the first day of the year
+        //using the 'withDayOfYear(1) method
         DateTimeFormatter DateTimeFormatter = null;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy"); // using the DateTimeFormatter
-        //class to format the dates in month to date format
+        //class to format the dates in Year to date format
         System.out.println("From" + " " + startOfTheCurrentYear.format(formatter) + " to " + currentDate.format(formatter));
 
         for (Transaction transaction : transactions) {

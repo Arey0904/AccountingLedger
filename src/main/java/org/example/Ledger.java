@@ -104,7 +104,7 @@ public class Ledger {
             case "R":
                 reportsMenu();
             case "H":
-                Main.homescreen();
+                FinanceAccount.homescreen();
             default:
                 System.out.println("Please enter a a valid option");
                 break;
