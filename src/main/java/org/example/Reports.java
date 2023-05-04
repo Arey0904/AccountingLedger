@@ -60,6 +60,13 @@ public class Reports {
                         item.getVendor() + " | " + item.getAmount());
             }
         }
+        System.out.println("Run again?(R).....Or return to Report Menu?(L)");
+        String choice = scanner.nextLine();
+        if (choice.equalsIgnoreCase("R")){
+            showSearchByVendor();
+        }else {
+            Ledger.reportsMenu();
+        }
 
     }
 
@@ -74,6 +81,14 @@ public class Reports {
                 System.out.println(item.getDate() + " | " + item.getTime() + " | " + item.getDescription() + " | " +
                         item.getVendor() + " | " + item.getAmount());
             }
+        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Run again?(R).....Or return to Report Menu?(L)");
+        String choice = scanner.nextLine();
+        if (choice.equalsIgnoreCase("R")){
+            showPreviousYear();
+        }else {
+            Ledger.reportsMenu();
         }
         return previousYearValue;
     }
@@ -95,6 +110,14 @@ public class Reports {
                         transaction.getVendor() + " | " + transaction.getAmount());
             }
         }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Run again?(R).....Or return to Report Menu?(L)");
+        String choice = scanner.nextLine();
+        if (choice.equalsIgnoreCase("R")){
+            showYearToDate();
+        }else {
+            Ledger.reportsMenu();
+        }
     }
 
     private static int showPreviousMonth() {
@@ -110,7 +133,14 @@ public class Reports {
             }
         }
 
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Run again?(R).....Or return to Report Menu?(L)");
+        String choice = scanner.nextLine();
+        if (choice.equalsIgnoreCase("R")){
+            showPreviousMonth();
+        }else {
+            Ledger.reportsMenu();
+        }
         return previousMonthsValue;
     }
 
@@ -129,6 +159,14 @@ public class Reports {
                 System.out.println(item.getDate() + " | " + item.getTime() + " | " + item.getDescription() + " | " +
                         item.getVendor() + " | " + item.getAmount());
             }
+        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Run again?(R).....Or return to Report Menu?(L)");
+        String choice = scanner.nextLine();
+        if (choice.equalsIgnoreCase("R")){
+            showMonthToDate();
+        }else {
+            Ledger.reportsMenu();
         }
     }
 }

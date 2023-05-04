@@ -44,7 +44,7 @@ public class FinanceAccount {
     public static void addDeposit() {
         //using Scanner to get user's input and storing it in a corresponding variable
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter Date.");
+        System.out.println("Enter Date: yyyy-mm-dd");
         String date = scanner.nextLine();
         System.out.println("Enter Time: HH:MM:SS");
         String time = scanner.nextLine();
@@ -66,10 +66,11 @@ public class FinanceAccount {
                     vendor + "|" +
                     amount
             );
+            fileWriter.close();
             System.out.println("Deposit added successfully!");
         } catch (IOException e) {
             System.out.println("ERROR inputting date!");
-            throw new RuntimeException(e);
+
         }
         homescreen();
     }
@@ -77,7 +78,7 @@ public class FinanceAccount {
     public static void makePayment() {
         // Using Scanner to get user's input and storing it in the corresponding variable
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter Date.");
+        System.out.println("Enter Date: yyyy-mm-dd");
         String date = scanner.nextLine();
         System.out.println("Enter Time: HH:MM:SS");
         String time = scanner.nextLine();
@@ -99,11 +100,11 @@ public class FinanceAccount {
                     description + "|" +
                     vendor + "|" +
                     amount
-            );
+            );fileWriter.close();
             System.out.println("Payment added successfully!");
         } catch (IOException e) { //print an error message when input is wrong
             System.out.println("ERROR inputting date!");
-            throw new RuntimeException(e);
+
         }
         homescreen();
 
