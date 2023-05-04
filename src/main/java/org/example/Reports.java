@@ -9,6 +9,7 @@ import static org.example.Ledger.transactions;
 public class Reports {
 
     public static void reportsMenu() {
+        //creating a method called showLedger() to display the report entries
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
                         
