@@ -14,13 +14,18 @@ methods within them.
 
 ## Things you can do in Home screen
 Add a deposit
+
 Make Payment
+
 Show ledger
 
 ## In Show Ledger
 All Entries
+
 Show deposits
+
 Show Payments
+
 Reports
 
 ## Reports
