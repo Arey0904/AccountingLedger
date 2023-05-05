@@ -50,3 +50,6 @@ while (true) { // using else/if statement to correspond based on users input if 
 ## Reports Features
 
 ![2023-05-05 (4).png](..%2F..%2F..%2FUsers%2Farey2%2FOneDrive%2FPictures%2FScreenshots%2F2023-05-05%20%284%29.png)
+
+## Shout outs
+Thank you Paul Kimball, Crisit , Muhammed, Nabil, and Raquan for helping me during this project.
