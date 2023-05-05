@@ -11,3 +11,7 @@ to the current day with the added ability to look back on the previous month wit
 to the current day and the previous year with the previous Year method. You are also able to search the vendor in the reports with the SearchByVendor method. Finally, 
 you are also able to go back to home-screen anytime you like. This was done by using multiple classes which each has loops and arrays and a multitude of functions and 
 methods within them. 
+
+## Pieces of code
+
+while (true) { // using else/if statement to correspond based on users input if (choice.equalsIgnoreCase("H")) { Main.homescreen(); break; } else if (choice.equalsIgnoreCase("R")) { addDeposit(); break; } else { System.out.println("Please enter a valid option ('H' or 'R'):"); choice = scanner.next(); } }
