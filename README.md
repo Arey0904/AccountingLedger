@@ -37,7 +37,7 @@ Search by Vendor
 
 ## Pieces of code
 
-while (true) { // using else/if statement to correspond based on users input if (choice.equalsIgnoreCase("H")) { Main.homescreen(); break; } else if (choice.equalsIgnoreCase("R")) { addDeposit(); break; } else { System.out.println("Please enter a valid option ('H' or 'R'):"); choice = scanner.next(); } }
+FileWriter.close()
 
 ## Home Screen features
 
