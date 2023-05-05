@@ -38,15 +38,3 @@ Search by Vendor
 ## Pieces of code
 
 while (true) { // using else/if statement to correspond based on users input if (choice.equalsIgnoreCase("H")) { Main.homescreen(); break; } else if (choice.equalsIgnoreCase("R")) { addDeposit(); break; } else { System.out.println("Please enter a valid option ('H' or 'R'):"); choice = scanner.next(); } }
-
-## Home Screen features
-
-![2023-05-05.png](..%2F..%2F..%2FUsers%2Farey2%2FOneDrive%2FPictures%2FScreenshots%2F2023-05-05.png)
-
-## Ledger features
-
-![2023-05-05 (3).png](..%2F..%2F..%2FUsers%2Farey2%2FOneDrive%2FPictures%2FScreenshots%2F2023-05-05%20%283%29.png)
-
-## Report features
-
-![2023-05-05 (4).png](..%2F..%2F..%2FUsers%2Farey2%2FOneDrive%2FPictures%2FScreenshots%2F2023-05-05%20%284%29.png)
