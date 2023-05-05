@@ -12,6 +12,29 @@ to the current day and the previous year with the previous Year method. You are 
 you are also able to go back to home-screen anytime you like. This was done by using multiple classes which each has loops and arrays and a multitude of functions and 
 methods within them. 
 
+## Things you can do in Home screen
+Add a deposit
+Make Payment
+Show ledger
+
+## In Show Ledger
+All Entries
+Show deposits
+Show Payments
+Reports
+
+## Reports
+
+Show Month to Date
+
+Previous Month
+
+Show Year to Date
+
+Previous Year
+
+Search by Vendor
+
 ## Pieces of code
 
 while (true) { // using else/if statement to correspond based on users input if (choice.equalsIgnoreCase("H")) { Main.homescreen(); break; } else if (choice.equalsIgnoreCase("R")) { addDeposit(); break; } else { System.out.println("Please enter a valid option ('H' or 'R'):"); choice = scanner.next(); } }
